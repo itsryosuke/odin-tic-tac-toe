@@ -1,0 +1,159 @@
+/* CSS RESET */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* CSS RESET */
+
+#container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    width: 20rem;
+    height: 20rem;
+    display: grid;
+    grid: repeat(3, 1fr) / repeat(3, 1fr);
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 2rem;
+}
+
+.board_cell {
+    border: 1px solid black;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#display {
+    background-color: #E5E7EB;
+    height: 4rem;
+    width: 16rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+#board>button:first-child {
+    border-top-left-radius: 15px;
+}
+
+#board>button:nth-child(3) {
+    border-top-right-radius: 15px;
+}
+
+#board>button:nth-child(7) {
+    border-bottom-left-radius: 15px;
+}
+
+#board>button:nth-child(9) {
+    border-bottom-right-radius: 15px;
+}
+
+dialog {
+  margin: auto;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: rgb(255, 255, 255, 0.9);
+}
+
+::backdrop {
+  background-color: RGB(0, 0, 0, 0.8);
+  opacity: 0.75;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #E5E7EB;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 0.5rem;
+}
+
+.input-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #464646; 
+}
+
+form>h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border:1px solid blue;
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+}
+
+#start_button, #restart_button, form>button {
+  margin: 0.6rem;
+  padding: 0.4rem;
+  border:1px solid #999;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+button[type="submit"] {
+  margin: 1rem 0 0 0;
+}
